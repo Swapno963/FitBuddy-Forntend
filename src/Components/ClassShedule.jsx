@@ -46,7 +46,7 @@ export default function classNameShedule() {
               <th className="py-2 px-4  text-xl text-gray-600 leading-relaxed">Evening</th>
             </tr>
           </thead>
-          <tbody className="bg-sky-200">
+          <tbody className="bg-sky-300">
             {data.map((row) => (
               <tr key={row.id} className="border-b ">
                 <td className="py-12 text-center border-r font-medium text-gray-700 leading-relaxed text-3xl">{row.type}</td>

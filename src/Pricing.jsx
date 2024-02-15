@@ -3,21 +3,21 @@ const membershipPlans = [
   {
     id:1,
       title: "Monthly Plan",
-      fee: "$50",
+      fee: "50",
       benefits: ["Unlimited gym access", "Access to group fitness classes", "Personalized workout plans"],
       footer_text: "Stay flexible with our monthly plan. Enjoy all the benefits of our gym without any long-term commitment."
   },
   {
     id:2,
       title: "6-Month Plan",
-      fee: "$250",
+      fee: "250",
       benefits: ["Unlimited gym access", "Access to group fitness classes", "Personalized workout plans", "2 complimentary personal training sessions"],
       footer_text: "Commit to your fitness journey and save with our 6-month plan. Get additional perks like personal training sessions."
   },
   {
     id:3,
       title: "1-Year Plan",
-      fee: "$450",
+      fee: "450",
       benefits: ["Unlimited gym access", "Access to group fitness classes", "Personalized workout plans", "4 complimentary personal training sessions", "Nutritional consultation"],
       footer_text: "Maximize your savings and commitment to fitness with our 1-year plan. Get exclusive benefits and personalized support."
   }
