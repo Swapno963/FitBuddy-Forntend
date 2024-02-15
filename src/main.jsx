@@ -14,6 +14,7 @@ import ClassSheduleDashBord from "./Dashbord/ClassSheduleDashBord.jsx";
 import DashBordProgams from "./Dashbord/DashBordProgams.jsx";
 import Membership from "./Dashbord/Membership.jsx";
 import NewsLetter from "./Dashbord/NewsLetterDashBord.jsx";
+import DetailPricing from "./Components/DetailPricing.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/detailPrice",
-    element: <Register />,
+    element: <DetailPricing />,
     errorElement: <ErrorPage />,
   },
   {

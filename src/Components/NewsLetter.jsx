@@ -1,15 +1,44 @@
+const newsletterData = {
+  subject: "Get Fit, Stay Fit: Your Ultimate Guide to Health & Wellness",
+  introduction:
+    "Welcome to our monthly newsletter, dedicated to helping you achieve your fitness goals and maintain a healthy lifestyle. Read on for tips, updates, and special offers from our gym!",
+  sections: [
+    {
+      title: "Featured Workout of the Month",
+      content:
+        "This month, we're spotlighting our High-Intensity Interval Training (HIIT) workout, guaranteed to burn fat, boost metabolism, and improve cardiovascular health. Join us for exhilarating sessions led by our expert trainers!",
+    },
+    {
+      title: "Nutrition Tips & Recipes",
+      content:
+        "Fuel your body for success with our nutrition tips and delicious recipes! Discover the power of balanced meals, smart snacking, and hydration strategies to support your fitness journey.",
+    },
+    {
+      title: "Member Success Story",
+      content:
+        "Meet John, one of our dedicated members who transformed his health and fitness with our programs. Read his inspiring story and get motivated to reach your own goals!",
+    },
+    {
+      title: "Upcoming Events & Specials",
+      content:
+        "Don't miss out on our upcoming events and specials! From fitness challenges and workshops to exclusive discounts on personal training packages, there's something for everyone to enjoy.",
+    },
+  ],
+  closing:
+    "Ready to take your fitness to the next level? Visit us today and discover why we're the ultimate destination for health and wellness. Let's achieve greatness together!",
+};
+
 export default function NewsLetter() {
   return (
-    <div className="relative isolate overflow-hidden py-16 sm:py-24 lg:py-32 bg-purple-100">
+    <div className="relative isolate overflow-hidden py-16 sm:py-24 lg:py-32 bg-gradient-to-r from-purple-300 to-purple-600 ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
-            <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">
-              Subscribe to our newsletter.
+            <h2 className="text-2xl font-bold  text-black sm:text-4xl leading-10">
+              {newsletterData.subject}
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-900">
-              Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing
-              velit quis. Duis tempor incididunt dolore.
+              {newsletterData.introduction}
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
               <label htmlFor="email-address" className="sr-only">
@@ -33,40 +62,18 @@ export default function NewsLetter() {
             </div>
           </div>
           <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
-            <div className="flex flex-col items-start">
-              <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                <li className="h-6 w-6 text-white" aria-hidden="true" />
+            {newsletterData.sections.map((item) => (
+              <div key={item.title} className="flex flex-col items-start">
+                <div className="mt-4 font-semibold text-white">
+                  {item.title}
+                </div>
+                <dd className="mt-2 leading-7 font-semibold text-gray-900">
+                  {item.content.slice(0, 50)}
+                </dd>
               </div>
-              <dt className="mt-4 font-semibold text-white">Weekly articles</dt>
-              <dd className="mt-2 leading-7 text-gray-900">
-                Non laboris consequat cupidatat laborum magna. Eiusmod non irure
-                cupidatat duis commodo amet.
-              </dd>
-            </div>
-            <div className="flex flex-col items-start">
-              <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                <li className="h-6 w-6 text-white" aria-hidden="true" />
-              </div>
-              <dt className="mt-4 font-semibold text-white">No spam</dt>
-              <dd className="mt-2 leading-7 text-gray-900">
-                Officia excepteur ullamco ut sint duis proident non adipisicing.
-                Voluptate incididunt anim.
-              </dd>
-            </div>
+            ))}
           </dl>
         </div>
-      </div>
-      <div
-        className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
-        aria-hidden="true"
-      >
-        <div
-          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-        />
       </div>
     </div>
   );

@@ -7,15 +7,15 @@ export default function Footer() {
         
         <div className="flex flex-1 justify-around flex-wrap ">
         <div className="flex flex-col ">
-          <h3 className="text-3xl pb-3">Fit Buddy</h3>
-          <p>
+          <h3 className="text-3xl pb-3 font-bold">Fit Buddy</h3>
+          <p className="font-semibold leading-8">
             Get ready for the new lifestyle. Find Your <br /> perfect Routin In
             hear. Get Rewards
           </p>
         </div>
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <h3 className="text-2xl font-medium font-montserrat text-white ">
+              <h3 className="text-3xl font-xl font-bold font-montserrat text-white ">
                 {section.title}
               </h3>
 
@@ -23,7 +23,7 @@ export default function Footer() {
                 {section.links.map((link) => (
                   <li
                     key={link.name}
-                    className="mt-3 text-white hover:text-slate-gray"
+                    className="mt-3 text-white hover:text-slate-gray font-semibold"
                   >
                     <a href={link.link}>{link.name}</a>
                   </li>

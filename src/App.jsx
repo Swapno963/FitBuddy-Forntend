@@ -6,7 +6,6 @@ import NewsLetter from "./Components/NewsLetter";
 import ProgramContainer from "./Components/ProgramContainer";
 // import TopBanner from "./Components/TopBanner";
 import Trainer from "./Components/Trainer";
-import DetailPricing from "./Components/DetailPricing";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Pricing from "./Pricing";
@@ -16,14 +15,18 @@ export default function App() {
     <div>
       <Navbar />
       <HeroSectioin />
+
       <Trainer />
       <ClassShedule />
       <ProgramContainer />
+
       {/* <TopBanner /> */}
+
       <Pricing />
-      <DetailPricing/>
+      {/* <DetailPricing/> */}
       <ContactUs />
       <NewsLetter />
+
       {/* <NotFound /> */}
       <Footer />
     </div>

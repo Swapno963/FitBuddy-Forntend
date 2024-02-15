@@ -7,9 +7,12 @@ import DashBordProgams from "../Dashbord/DashBordProgams";
 import Home from "../Dashbord/Home";
 import Membership from "../Dashbord/Membership";
 import NewsLetter from "../Dashbord/NewsLetterDashBord";
+import Navbar from "../Navbar";
 const Dashboard = () => {
   return (
-    <div className="flex h-screen bg-gray-100">
+    <>
+      <Navbar/>
+    <div className="flex h-screen bg-gray-100 ">
       {/* Sidebar */}
       <div className="pl-12 pt-12 bg-gray-800 text-white w-64 p-4">
         <h2 className="text-2xl font-semibold">Dashboard</h2>
@@ -54,7 +57,7 @@ const Dashboard = () => {
         </h2>
 
         {/* Your main content goes here */}
-        <div className="bg-white p-4 rounded shadow-md">
+        <div className="bg-blue-200 h-screen  p-4 rounded shadow-md">
           {/* Content goes here */}
           <div className="flex-1 p-8">
             <Routes>
@@ -69,6 +72,7 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

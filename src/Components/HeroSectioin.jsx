@@ -3,7 +3,7 @@ import "../assets/style.css";
 export default function HeroSectioin() {
   return (
     <>
-      <div className=" video-background ">
+      <div className=" video-background brightness-50">
         <video autoPlay muted loop id="bg-video">
           <source src={video} type="video/mp4" />
         </video>
